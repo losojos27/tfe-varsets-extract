@@ -1,0 +1,63 @@
+# TFE Variable Sets Python
+
+This repository contains a Python script for managing Terraform Enterprise (TFE) variable sets.
+
+## Prerequisites
+
+Before running the script, make sure you have the following:
+
+- Python 3.x installed
+- TFE API token
+- TFE organization and workspace details
+
+## Installation
+
+1. Clone this repository:
+
+    ```shell
+    git clone https://github.com/your-username/tfe-variable-sets-python.git
+    ```
+
+2. Install the required dependencies:
+
+   - requests
+   - os
+   - json
+   - copy
+   - argparse
+
+
+## Usage
+
+1. set ENV variables:
+
+    ```shell
+    export TFE_ORG=<your TFE org>
+    export TFE_URL=<your TFE URL>
+    export TFE_USER_TOKEN=<your TFE Token>
+    ```
+
+2. Run the script:
+
+    ```shell
+    python3 tfe-var-sets.py
+    ```
+
+## Features
+
+- given a TFE organization, copies all variables from variable sets to their currrently assigned workspaces
+- skips variables already assigned as workspace variables 
+- accounts for variable sets assigned to:
+  - workspaces
+  - projects
+  - org (global)
+
+## Limitations
+
+- for variables marked as sensitive:
+  - the workspace variable is created but not defined
+  - you must define all sensitive variables before deleting the variable sets to maintain workflow
+
+## Contributing
+
+Contributions are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request.
