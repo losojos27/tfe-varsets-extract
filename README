@@ -14,7 +14,7 @@ Before running the script, make sure you have the following:
 
 1. Clone this repository:
 
-    ```shell
+    ``` shell
     git clone https://github.com/your-username/tfe-variable-sets-python.git
     ```
 
@@ -31,7 +31,7 @@ Before running the script, make sure you have the following:
 
 1. set ENV variables:
 
-    ```shell
+    ``` shell
     export TFE_ORG=<your TFE org>
     export TFE_URL=<your TFE URL>
     export TFE_USER_TOKEN=<your TFE Token>
@@ -39,7 +39,7 @@ Before running the script, make sure you have the following:
 
 2. Run the script:
 
-    ```shell
+    ``` shell
     python3 tfe-var-sets.py
     ```
 
